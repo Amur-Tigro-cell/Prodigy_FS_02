@@ -1,0 +1,22 @@
+services:
+  # Backend Service
+  - type: web
+    name: emptrack-backend
+    env: node
+    repo: https://github.com/YOUR_USERNAME/emptrack
+    rootDir: server
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: CORS_ORIGIN
+        value: https://emptrack.netlify.app
+    healthCheckPath: /api/health
+    autoDeploy: true
