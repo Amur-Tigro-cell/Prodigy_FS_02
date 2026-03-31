@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "express": "^4.18.2",
-    "mongoose": "^7.5.0",
     "pg": "^8.11.3",
     "bcryptjs": "^2.4.3",
     "jsonwebtoken": "^9.0.2",
@@ -23,7 +22,7 @@
   "devDependencies": {
     "nodemon": "^3.0.1"
   },
-  "keywords": ["employee", "management", "nodejs", "express", "mongodb"],
-  "author": "",
+  "keywords": ["emptrack", "employee", "management", "nodejs", "express", "postgresql"],
+  "author": "EmpTrack Team",
   "license": "MIT"
 }
