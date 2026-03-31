@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Prodigy_FS_02/static/css/main.1396ce85.css",
-    "main.js": "/Prodigy_FS_02/static/js/main.baf72054.js",
+    "main.js": "/Prodigy_FS_02/static/js/main.f251ead2.js",
     "index.html": "/Prodigy_FS_02/index.html",
     "main.1396ce85.css.map": "/Prodigy_FS_02/static/css/main.1396ce85.css.map",
-    "main.baf72054.js.map": "/Prodigy_FS_02/static/js/main.baf72054.js.map"
+    "main.f251ead2.js.map": "/Prodigy_FS_02/static/js/main.f251ead2.js.map"
   },
   "entrypoints": [
     "static/css/main.1396ce85.css",
-    "static/js/main.baf72054.js"
+    "static/js/main.f251ead2.js"
   ]
 }
