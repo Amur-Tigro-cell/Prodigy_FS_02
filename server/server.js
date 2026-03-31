@@ -37,7 +37,8 @@ const pool = new Pool({
 // Test database connection
 pool.query('SELECT NOW()', (err, res) => {
   if (err) {
-    console.error('Database connection error:', err);
+    console.error('Database connection error:', err.message);
+    console.log('Server will start anyway, but database features may not work');
   } else {
     console.log('Database connected successfully at:', res.rows[0].now);
   }
@@ -95,6 +96,11 @@ createTables();
 // Health check endpoint
 app.get('/api/health', (req, res) => {
   res.status(200).json({ message: 'Server is running', database: 'connected' });
+});
+
+// Root endpoint for Render health checks
+app.get('/', (req, res) => {
+  res.status(200).json({ message: 'EmpTrack Backend API is running', version: '1.0.0' });
 });
 
 // Auth routes

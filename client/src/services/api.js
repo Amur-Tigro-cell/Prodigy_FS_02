@@ -3,7 +3,7 @@ import { API_ENDPOINTS, STORAGE_KEYS } from '../constants/constants';
 
 // Create axios instance
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:5000',
+  baseURL: process.env.REACT_APP_API_URL || 'https://prodigy-fs-02-us1x.onrender.com',
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',
