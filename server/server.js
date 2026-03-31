@@ -32,7 +32,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // PostgreSQL connection
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
+  connectionString: process.env.DATABASE_URL || 'postgresql://postgres.qacheypfgltcnouxokxe:EmpTrack@2024!SecureDB@qacheypfgltcnouxokxe.supabase.co:5432/postgres',
   ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false
 });
 

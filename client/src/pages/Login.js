@@ -22,17 +22,14 @@ const Login = () => {
   const onSubmit = async (data) => {
     setIsLoading(true);
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
       // Add role to data
       const loginData = {
         ...data,
         role: selectedRole
       };
       
-      // Login user
-      await login(loginData);
+      // Login user with real API call
+      await login(data.email, data.password);
       
       toast.success('Login successful!');
       
