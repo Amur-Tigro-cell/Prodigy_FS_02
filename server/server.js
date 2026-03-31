@@ -20,8 +20,10 @@ app.use(limiter);
 
 // CORS configuration
 app.use(cors({
-  origin: process.env.CORS_ORIGIN || 'http://localhost:3000',
-  credentials: true
+  origin: ['https://Amur-Tigro-cell.github.io', 'http://localhost:3000'],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 // Body parser middleware
@@ -101,6 +103,15 @@ app.get('/api/health', (req, res) => {
 // Root endpoint for Render health checks
 app.get('/', (req, res) => {
   res.status(200).json({ message: 'EmpTrack Backend API is running', version: '1.0.0' });
+});
+
+// Handle pre-flight requests
+app.options('*', (req, res) => {
+  res.header('Access-Control-Allow-Origin', 'https://Amur-Tigro-cell.github.io');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.header('Access-Control-Allow-Credentials', 'true');
+  res.status(200).send();
 });
 
 // Auth routes
