@@ -105,6 +105,7 @@ app.get('/', (req, res) => {
 
 // Auth routes
 app.post('/api/auth/login', async (req, res) => {
+  console.log('Login attempt:', req.body);
   try {
     const { email, password } = req.body;
     
